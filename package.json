@@ -1,0 +1,11 @@
+{
+  "name": "volcanic-lightning",
+  "workspaces": [ 
+    "server",
+    "volcanic-lightning-ui"
+  ],
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
