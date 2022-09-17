@@ -21,7 +21,6 @@ import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import MapIcon from '@mui/icons-material/Map';
 import ExportIcon from '@mui/icons-material/DownloadOutlined';
-import ReloadIcon from '@mui/icons-material/ReplayOutlined'
 import TableChartIcon from '@mui/icons-material/TableChart';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import dayjs from 'dayjs';
@@ -155,7 +154,8 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 const StyledButton = styled(Button)(() => ({
-  color: palette.secondary
+  color: palette.secondary,
+  textTransform: 'none'
 }))
 
 
@@ -172,7 +172,7 @@ const Console = () => {
     setOpen(false);
   };
 
-  const { selectedPanel, setPanel, lightning, reload, loading, error, theme, setTheme } = React.useContext(AppContext);
+  const { selectedPanel, setPanel, lightning, loading, error, theme, setTheme } = React.useContext(AppContext);
 
   const iconsList = [
         {
@@ -212,23 +212,11 @@ const Console = () => {
                 component="div"
                 aria-label="toolbar-timestamp"
               >
-                Updated at {dayjs(lightning?.timestamp).format('HH:mm DD/MM')} UTC
+                Updated at {dayjs(lightning?.timestamp).format('HH:mm DD/MM')}
               </Typography>}
           </div>
           <div>
-            <ButtonGroup disabled={loading} variant="text" aria-label="text button group">
-              <StyledButton
-                aria-label="toolbar-reload-button"
-                title="Reload lightning data"
-                onClick={reload} endIcon={<ReloadIcon />}>Reload</StyledButton>
-              <StyledButton
-                aria-label="toolbar-export-button"
-                title="Export to CSV"
-                endIcon={<ExportIcon />}
-                onClick={() => downloadCSV(lightning?.features as Feature[], lightning?.timestamp as string)}
-              >
-                Export
-              </StyledButton>
+            <ButtonGroup disabled={loading} variant="text" aria-label="text button group">  
               <StyledButton
                 aria-label="toolbar-export-button"
                 title="View History"
@@ -236,6 +224,14 @@ const Console = () => {
                 onClick={() => null}
               >
                 History
+              </StyledButton>
+              <StyledButton
+                aria-label="toolbar-export-button"
+                title="Export to CSV"
+                endIcon={<ExportIcon />}
+                onClick={() => downloadCSV(lightning?.features as Feature[], lightning?.timestamp as string)}
+              >
+                Export
               </StyledButton>
             </ButtonGroup>
             <MaterialUISwitch

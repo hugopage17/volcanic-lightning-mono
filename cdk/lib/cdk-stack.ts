@@ -1,5 +1,6 @@
 import * as cdk from '@aws-cdk/core';
 import { Rule, Schedule } from '@aws-cdk/aws-events';
+import { LambdaFunction } from '@aws-cdk/aws-events-targets';
 import { defineLambda } from './lambda-construct';
 
 export class VolcanicLightningCdkStack extends cdk.Stack {
@@ -16,9 +17,9 @@ export class VolcanicLightningCdkStack extends cdk.Stack {
         },
     )
 
-      // const rule = new Rule(this, 'ScheduleRule', {
-      //   schedule: Schedule.cron({ minute: '5', hour: '4' })
-      // });
-    // The code that defines your stack goes here
+    const rule = new Rule(this, 'VolcanoPollerRule', {
+      schedule: Schedule.rate(cdk.Duration.minutes(10))
+    });
+    rule.addTarget(new LambdaFunction(lightningPollerLambda))
   }
 }

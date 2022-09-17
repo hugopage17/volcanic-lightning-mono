@@ -73,7 +73,7 @@ const Map = ({ features, center }: Props): JSX.Element => {
                     </MapButton>
                     <MapContainer
                         ref={mapRef}
-                        id="map-component" center={center ?? [42.505, 55.09]}
+                        id="map-component" center={center ?? [17.505, 32.09]}
                         zoom={3}
                         scrollWheelZoom={false}
                     >

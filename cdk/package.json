@@ -1,5 +1,5 @@
 {
-  "name": "volcanic-lightning-cdk",
+  "name": "@volcanic-lightning/volcanic-lightning-cdk",
   "version": "0.1.0",
   "bin": {
     "cdk": "bin/cdk.js"
@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "synth": "cdk synth --profile personal",
+    "deploy": "cdk deploy --profile personal"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.106.1",
