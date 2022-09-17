@@ -1,8 +1,7 @@
 {
   "name": "volcanic-lightning",
-  "workspaces": [ 
-    "server",
-    "volcanic-lightning-ui"
+  "workspaces": [
+    "app"
   ],
   "private": true,
   "version": "1.0.0",

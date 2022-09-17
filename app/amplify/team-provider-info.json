@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-volcaniclightning-dev-180746-authRole",
+      "UnauthRoleArn": "arn:aws:iam::300411352778:role/amplify-volcaniclightning-dev-180746-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::300411352778:role/amplify-volcaniclightning-dev-180746-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-volcaniclightning-dev-180746-deployment",
+      "UnauthRoleName": "amplify-volcaniclightning-dev-180746-unauthRole",
+      "StackName": "amplify-volcaniclightning-dev-180746",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:300411352778:stack/amplify-volcaniclightning-dev-180746/0eab0a40-364f-11ed-8c49-0a862dbdf648",
+      "AmplifyAppId": "d3newn803ach8s"
+    }
+  }
+}
