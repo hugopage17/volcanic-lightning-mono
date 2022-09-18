@@ -7,7 +7,6 @@ import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -23,7 +22,6 @@ import MapIcon from '@mui/icons-material/Map';
 import ExportIcon from '@mui/icons-material/DownloadOutlined';
 import TableChartIcon from '@mui/icons-material/TableChart';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import dayjs from 'dayjs';
 
 import MapComponent from './map';
 import TableComponent from './table';
@@ -205,15 +203,6 @@ const Console = () => {
             >
               <MenuIcon />
             </IconButton>
-            {lightning?.timestamp &&
-              <Typography
-                variant="body2"
-                noWrap
-                component="div"
-                aria-label="toolbar-timestamp"
-              >
-                Updated at {dayjs(lightning?.timestamp).format('HH:mm DD/MM')}
-              </Typography>}
           </div>
           <div>
             <ButtonGroup disabled={loading} variant="text" aria-label="text button group">  
@@ -337,4 +326,4 @@ const Console = () => {
   );
 }
 
-export default Console
+export default Console;

@@ -5,9 +5,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Feature } from '@global-volcanic-lightning/types';
 import MapIcon from '@mui/icons-material/Map';
-import CloseIcon from '@mui/icons-material/Close';
 import InsertChartIcon from '@mui/icons-material/InsertChart';
-import { Typography, Divider, Tooltip, Tab, Tabs, IconButton } from '@mui/material';
+import { Typography, Divider, Tooltip, Tab, Tabs } from '@mui/material';
 import WarningIcon from '@mui/icons-material/ReportGmailerrorred';
 import 'leaflet/dist/leaflet.css';
 import AppContext from '../../../AppContext';
@@ -37,13 +36,6 @@ const Text2 = styled(Typography)(({ theme }) => ({
     color: theme.palette.text.secondary
 }));
 
-const CloseButton = styled(IconButton)(({ theme }) => ({
-    backgroundColor: 'none',
-    position: 'absolute',
-    top:'-2%',
-    left:'-1%',
-}))
-
 const StrikeDialog = ({ open, handleClose, strike, index }: Props): JSX.Element => {
     const { theme } = React.useContext(AppContext);
     const [loadedMap, setMap] = React.useState<boolean>(true);
@@ -72,12 +64,6 @@ const StrikeDialog = ({ open, handleClose, strike, index }: Props): JSX.Element 
             fullWidth={true}
             maxWidth="md"
         >
-            <CloseButton
-                aria-label={`strike-dialog-${index}-close-button`}
-                onClick={handleClose}
-            >
-                <CloseIcon />
-            </CloseButton>
             <DialogTitle id="strike-dialog-title" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <Tooltip
