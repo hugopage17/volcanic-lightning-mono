@@ -3,7 +3,7 @@ backend:
   phases:
     preBuild:
       commands:
-        - 'npm install -g typescript'
+        - "npm install -g typescript"
 frontend:
   phases:
     preBuild:
@@ -12,17 +12,17 @@ frontend:
         - npm install -g env-cmd
     build:
       commands:
-        - echo "I am running 🏃 on prod" 
+        - echo "I am running 🏃 on prod"
         - yarn run build:dev
   artifacts:
     baseDirectory: build
     files:
-      - '**/*'
+      - "**/*"
   cache:
     paths:
       - node_modules/**/*git
 customHeaders:
-  - pattern: '**/*'
+  - pattern: "**/*"
     headers:
-      - key: 'Cache-Control'
-        value: 'max-age=0'
+      - key: "Cache-Control"
+        value: "max-age=0"

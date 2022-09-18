@@ -40,17 +40,17 @@ export const listGeoJSONS = /* GraphQL */ `
         features {
           type
           geometry {
-          coordinates
-          type
-        }
-        properties {
-          area
-          hundredKmStrikes
-          name
-          twentyKmStrikes
-          volcanoType
-          severity
-        }
+            coordinates
+            type
+          }
+          properties {
+            area
+            hundredKmStrikes
+            name
+            twentyKmStrikes
+            volcanoType
+            severity
+          }
         }
         timestamp
         id

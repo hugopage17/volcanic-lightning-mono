@@ -1,9 +1,9 @@
-import type {Config} from '@jest/types';
+import type { Config } from "@jest/types";
 
 // Sync object
 const config: Config.InitialOptions = {
   verbose: true,
-  testEnvironment: 'jsdom',
-  preset: 'ts-jest',
+  testEnvironment: "jsdom",
+  preset: "ts-jest",
 };
 export default config;

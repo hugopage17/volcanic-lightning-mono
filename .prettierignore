@@ -1,0 +1,6 @@
+# Ignore artifacts:
+build
+coverage
+cdk/cdk.out
+cdk/bin
+app/cypress
