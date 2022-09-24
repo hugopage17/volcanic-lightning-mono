@@ -1,9 +1,9 @@
 export type AmplifyDependentResourcesAttributes = {
-    "api": {
-        "volcaniclightning": {
-            "GraphQLAPIKeyOutput": "string",
-            "GraphQLAPIIdOutput": "string",
-            "GraphQLAPIEndpointOutput": "string"
-        }
-    }
-}
+  api: {
+    volcaniclightning: {
+      GraphQLAPIKeyOutput: "string";
+      GraphQLAPIIdOutput: "string";
+      GraphQLAPIEndpointOutput: "string";
+    };
+  };
+};
