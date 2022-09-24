@@ -17,4 +17,4 @@ jobs:
         run: yarn
 
       - name: Tests Suites
-        run: cd app && yarn test
+        run: cd app && yarn run test:unit
