@@ -14,7 +14,9 @@
     "prettier": "2.7.1"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prettier-check": "prettier --check \"*/**/*.{vue,ts}\"",
+    "prettier-fix": "prettier --write \"*/**/*.{vue,js,ts}\""
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
