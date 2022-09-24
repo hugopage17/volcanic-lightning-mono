@@ -1,7 +1,7 @@
-name: Unit testing
+name: Prettier check
 on: [push]
 jobs:
-  unit-testing:
+  prettier-check:
     runs-on: ubuntu-latest
     container: node:14-alpine
     steps:
@@ -14,7 +14,7 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-        run: cd app && yarn
+        run: yarn
 
-      - name: Tests Suites
-        run: yarn run test:unit
+      - name: Prettier Check
+        run: yarn prettier-check
