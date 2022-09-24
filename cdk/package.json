@@ -27,6 +27,7 @@
     "@aws-cdk/aws-lambda": "1.106.1",
     "@aws-cdk/aws-lambda-nodejs": "1.106.1",
     "@aws-cdk/core": "1.106.1",
+    "@global-volcanic-lightning/types": "^1.0.4",
     "axios": "^0.27.2",
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",

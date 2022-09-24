@@ -44,15 +44,9 @@ const DrawerItem = ({
           onChange={(e) => setRegion(region, e.target.checked)}
         />
         <ListItemText primary={region} />
-        {open ? (
-          <IconButton onClick={() => toggle(!open)}>
-            <ExpandLess />
-          </IconButton>
-        ) : (
-          <IconButton onClick={() => toggle(!open)}>
-            <ExpandMore />
-          </IconButton>
-        )}
+        <IconButton onClick={() => toggle(!open)}>
+          {open ? <ExpandLess /> : <ExpandMore />}
+        </IconButton>
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div">

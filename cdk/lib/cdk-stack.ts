@@ -18,9 +18,9 @@ export class VolcanicLightningCdkStack extends cdk.Stack {
       }
     );
 
-    const rule = new Rule(this, "VolcanoPollerRule", {
-      schedule: Schedule.rate(cdk.Duration.minutes(10)),
-    });
-    rule.addTarget(new LambdaFunction(lightningPollerLambda));
+    // const rule = new Rule(this, "VolcanoPollerRule", {
+    //   schedule: Schedule.rate(cdk.Duration.minutes(10)),
+    // });
+    // rule.addTarget(new LambdaFunction(lightningPollerLambda));
   }
 }

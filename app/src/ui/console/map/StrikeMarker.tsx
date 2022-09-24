@@ -11,29 +11,10 @@ interface Props {
   index: number;
 }
 
-const StrikeMarker = ({ strike, active, theme, index }: Props) => {
+const StrikeMarker: React.FC<Props> = ({ strike, active, theme, index }) => {
   if (!active) {
     return null;
   }
-
-  const popup = (properties: Feature["properties"]) => {
-    return (
-      <Popup>
-        <Typography variant="body1" aria-label={`map-popup-dialog-${index}`}>
-          <b>{properties.name}</b> - {properties.area}
-        </Typography>
-        <Divider />
-        <div>
-          <Typography variant="body2">
-            20km Strikes: {properties.twentyKmStrikes}
-          </Typography>
-          <Typography variant="body2">
-            100km Strikes: {properties.hundredKmStrikes}
-          </Typography>
-        </div>
-      </Popup>
-    );
-  };
 
   return (
     <CircleMarker
@@ -43,7 +24,20 @@ const StrikeMarker = ({ strike, active, theme, index }: Props) => {
       color={theme === "dark" ? palette.secondary : palette.accent}
       fillColor={theme === "dark" ? palette.secondary : palette.accent}
     >
-      {popup(strike.properties)}
+      <Popup>
+        <Typography variant="body1" aria-label={`map-popup-dialog-${index}`}>
+          <b>{strike.properties.name}</b> - {strike.properties.area}
+        </Typography>
+        <Divider />
+        <div>
+          <Typography variant="body2">
+            20km Strikes: {strike.properties.twentyKmStrikes}
+          </Typography>
+          <Typography variant="body2">
+            100km Strikes: {strike.properties.hundredKmStrikes}
+          </Typography>
+        </div>
+      </Popup>
     </CircleMarker>
   );
 };

@@ -156,18 +156,13 @@ const StyledButton = styled(Button)(() => ({
   textTransform: "none",
 }));
 
-const Console = () => {
+const Console: React.FC = () => {
   const themeHook = useTheme();
   const [open, setOpen] = React.useState<boolean>(false);
   const [openAboutDialog, toggleAboutDialog] = React.useState<boolean>(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  const handleDrawerOpen = () => setOpen(true);
+  const handleDrawerClose = () => setOpen(false);
 
   const {
     selectedPanel,
